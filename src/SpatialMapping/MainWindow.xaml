@@ -1,0 +1,11 @@
+﻿<Window x:Class="SpatialMapping.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:quad="clr-namespace:SpatialMapping.QuadTree"
+        xmlns:grid="clr-namespace:SpatialMapping.GridRegistration"
+        Title="Spatial Mapping" Background="#FFEFEFEF" ResizeMode="CanResize" SizeToContent="WidthAndHeight">
+    <Grid>
+        <quad:QuadTreeDisplay />
+        <!--<grid:GridRegistrationDisplay />-->
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="SpatialMapping.QuadTree.QuadTreeDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Loaded="ControlLoaded"
+             MouseLeftButtonUp="MouseClicked" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="Regenerate" Click="OnClick" />
+            <TextBlock Text="  Number of items: " VerticalAlignment="Center" />
+            <TextBox Text="10" x:Name="ItemCount" Width="30" />
+            <TextBlock Text="  Propagation Threshold: " VerticalAlignment="Center" />
+            <TextBox Text="2" x:Name="Threshold" Width="30" />
+            <TextBlock Text="      Intersecting Objects:  " VerticalAlignment="Center" />
+            <TextBlock x:Name="IntersectingItems" Text="0" VerticalAlignment="Center" />
+        </StackPanel>
+
+        <Canvas Grid.Row="1" x:Name="QuadCanvas" Width="600" Height="600" />
+    </Grid>
+</UserControl>
